@@ -38,6 +38,9 @@ void loop() {
   if (active) {
     counter = counter < 10 ? counter + 1 : 0;
     DigiMouse.setButtons(counter < 5 ? 1<<0 : 0);
+    // 1<<0 // left click
+    // 1<<1 // rightt click
   }
-  DigiMouse.delay(10);
+  DigiMouse.delay(5 + random(10));
+  //DigiMouse.delay(8);
 }
